@@ -1,5 +1,5 @@
 <?php
-echo '<script>console.log("Hola mundo");</script>';
+echo 'hola mundo';
 //Verificacion de existencia de datos
 
 /* if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
