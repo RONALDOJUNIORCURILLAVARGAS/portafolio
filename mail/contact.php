@@ -1,5 +1,8 @@
 <?php
-if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+echo '<script>console.log("Hola mundo");</script>';
+//Verificacion de existencia de datos
+
+/* if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   http_response_code(500);
   exit();
 }
@@ -16,5 +19,5 @@ $header = "From: $email";
 $header .= "Reply-To: $email";	
 
 if(!mail($to, $subject, $body, $header))
-  http_response_code(500);
+  http_response_code(500); */
 ?>
