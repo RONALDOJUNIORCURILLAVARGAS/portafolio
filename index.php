@@ -827,9 +827,30 @@
                                     data-validation-required-message="Por favor ingrese su mensaje"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
+                            <!-- 
                             <div>
                                 <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Enviar mensaje</button>
                             </div>
+ -->
+                            <div>
+                                <a class="btn btn-outline-primary" onclick="send_mail_href()"  >Enviar mensaje</a>
+                            </div>
+                            <script>
+                                function send_mail_href(){
+                                    //href="mailto:ronaldocurillavargas@gmail.com"
+                                    let subject= document.getElementById('subject').value;
+                                    let nombre=document.getElementById('name').value;
+                                    let mail=document.getElementById('email').value;
+                                    let message= `Hola soy ${nombre}.\n 
+                                    Identificado con correo: ${mail} .\n 
+                                    Mensaje: ${document.getElementById('message').value}`;
+                                    //alert('Hola mundop');
+                                    window.location.href = `mailto:ronaldocurillavargas@gmail.com?Subject=${subject}&body=${message}`;
+                                }
+
+
+                            </script>
+
                         </form>
                     </div>
                 </div>
@@ -837,7 +858,7 @@
         </div>
     </div>
     <!-- Contact End -->
-
+    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
